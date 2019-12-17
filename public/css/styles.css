@@ -1,0 +1,99 @@
+body {
+  background-image: url('../images/holly.jpg');
+  background-size: 200px;
+  font-family: 'Charm', cursive
+}
+
+.header {
+  display: flex;
+  justify-content: center
+}
+
+h1{
+  font-size: 3em
+}
+
+#app {
+  padding: 20px;
+  background-color: #f8e3d6;
+  width: 80%;
+  border: #11461c;
+  border-width: 20px;
+  border-style: solid;
+  margin: 60px;
+  font-size: 20px
+}
+
+.high {
+font-weight:600;
+font-size: 25px
+}
+
+.true span {
+  text-decoration: line-through;
+  border: 2px solid #1a681e;
+  color: #1a681e;
+  text-decoration-color: #1a681e;
+}
+
+.false {
+  border: 2px solid #f2360c;
+}
+
+button.button {
+  text-decoration: none;
+}
+
+
+.low {
+  color: grey;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin: 20px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+li span {
+  padding: 8px;
+}
+
+li button {
+  background: black;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+input[type="text"] {
+  font-size: 20px;
+  padding: 10px;
+  width: 50%;
+}
+
+input[type="submit"] {
+  font-size: 15px;
+  padding: 10px;
+  width: 50%;
+  color: white;
+  background-color: #11461c
+}
+
+button{
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #000;
+}

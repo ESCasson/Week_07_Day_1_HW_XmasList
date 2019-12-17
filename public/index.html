@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Charm&display=swap" rel="stylesheet">
+  <script src="./js/bundle.js"></script>
+
+  <title>Busy Bee To Do List</title>
+</head>
+<body>
+
+  <div id="app" >
+  <div class="header">
+      <h1>Eleanor's Christmas To Do List</h1>
+    </div>
+    <ul>
+      <li v-for="(listItem, index) in toDoList" v-bind:class="(listItem.doneStatus + ' ' + listItem.priority)">
+        <span>{{listItem.action}}</span>
+        <button class="button" v-if="listItem.doneStatus === false" v-on:Click="statusNotDone(index)">
+          Mark As Done</button>
+          <button class="button" v-if="listItem.doneStatus === true" v-on:Click="statusDone(index)">
+          Mark As Not Done</button>
+      </li>
+    </ul>
+    <hr>
+  <form v-on:submit.prevent="createNewListItem">
+    <label for="new-item">Add additional to do item:</label>
+    <input v-model="newListItemAction" type="text" id="new-listItemAction"/>
+    <br>
+    <br>
+    <label for="new-newListItemPriority">Add the priority: High</label>
+    <input v-model="newListItemPriority" type="radio" id="new-newListItemPriority" value="high"/>
+    <label for="new-newListItemPriority">Medium</label>
+    <input v-model="newListItemPriority" type="radio" id="new-newListItemPriority" value="medium"/>
+    <label for="new-newListItemPriority">Low</label>
+    <input v-model="newListItemPriority" type="radio" id="new-newListItemPriority" value="low"/>
+    <input type="submit" value ="Create new list item" />
+  </form>
+
+
+  </div>
+
+</body>
+</html>
